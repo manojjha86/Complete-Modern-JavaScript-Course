@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans';
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 10px 0px;
+}
+header{
+    background-color: #F39C12;
+    color: white;
+    display: flex;
+}
+.header-title{
+    padding: 20px 50px;
+    font-weight: bold;
+    font-size: 28px;
+    width: 75%;
+}
+.header-login{
+    width: 25%;
+    padding: 20px 50px;
+}
+.login-btn{
+    padding: 10px 20px;
+    border: none;
+}
+.main-content-area{
+    margin: 20px 20px;
+    padding: 20px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 2px;
+}
+.nav-menu-items{
+    padding:0px 0px;
+    display: flex;
+    /* border: #123 1.5px solid; */
+}
+.menu-item{
+    padding: 10px 15px;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #dedede;
+}
+.home-page, .emi-calculator-page, .apply-loan-page{
+    padding: 20px 20px;
+    border: #dedede 2px solid;
+}
+
+.home-page-banner{
+    background-color: #FDEBD0;
+    padding: 20px 30px;
+    color: #28282B;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.apply-now-button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #F39C12;
+    font-weight: bold;
+}
+.know-more-button{
+    border: #F39C12 2px solid;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #F39C12;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.our-services-container{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+.our-services{
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    width: 45%;
+}
+a{
+    text-decoration: none;
+    color: #F39C12;
+}
+
+
+
+.emi-calculator-form, .apply-for-loan-form{
+    padding: 20px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.column{
+    display: flex;
+    width: 100%;
+}
+.field-column-1{
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 20px;
+}
+.field-column-2{
+    width: 50%;
+    padding: 2px;
+    margin-bottom: 20px;
+}
+input[type=text], input[type=number], input[type=email], input[type=date], select{
+    width: 100%;
+    height: 36px;
+    border-radius: 3px;
+    border: #dedede 2px solid;
+}
+.calculate-emi-button{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #F39C12;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+ 
+.modal-wrapper {
+    width: 520px;
+    background: ghostwhite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-header {
+    padding-left: 20px;
+    border-bottom: #ddd 2px solid;
+}
+ 
+.modal-footer {
+    padding: 10px 20px;
+    display: flex;
+    border-top: #ddd 2px solid;
+}
+ 
+.modal-content {
+    margin: 50px 50px;
+}
+
+.close-modal-btn {
+    padding: 8px 25px;
+    background: #F39C12;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: ghostwhite;
+    font-weight: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+table{
+    width: 100%;
+}
+td{
+    padding: 8px 0px;
+}
+.hide {
+    display: none;
+}
