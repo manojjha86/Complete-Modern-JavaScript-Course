@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header onclick="alert('Header Clicked!')">
+        <div class="header-title">DOM Manipulation</div>
+        <div class="header-login" onclick="alert('Div Clicked!')">
+            <button class="login-btn" onclick="showClickAlert(event)">Login</button>
+        </div>
+    </header>
+    <div class="main-content-area">
+        <div class="nav-menu-items">
+            <div class="menu-item" onclick="renderSelectedSection('home-page')">Home</div>
+            <div class="menu-item" onclick="renderSelectedSection('emi-calculator-page')">EMI Calculator</div>
+            <div class="menu-item" onclick="renderSelectedSection('apply-loan-page')">Apply for Loan</div>
+        </div>
+        <div class="main-section-area">
+        <!--THIS SECTION IS FOR HOME PAGE-->
+        <section class="home-page">
+            <div class="home-page-banner">
+                <div>
+                    <h1>
+                        <strong>WE TAKE YOUR BANKING SECURITY</strong>
+                    </h1>
+                    <p style="font-size: 24px">SERIOUSLY !</p>
+                    <div style="margin-bottom: 50px;">
+                        Avail best loan offers from our bank and enjoy low rate of interest 
+                        for flexible duration. Apply now and get a call.
+                    </div>
+                    <button class="apply-now-button">APPLY NOW</button>
+                    <button class="know-more-button">KNOW MORE</button>
+                </div>
+            </div>
+
+            <h2>Home Page</h2>
+            <p class="about-us" id="intro">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                esse cillum dolore eu fugiat nulla pariatur
+            </p>
+            
+            <p class="about-us" id="about"></p>
+            <h2 class="about-us" id="offers"></h2>
+            <div class="our-services-container">
+                <div class="our-services">
+                    <h4>Savings Account</h4>
+                    <p>Open instant savings account in 5 minutes</p>
+                    <a href="#">OPEN NOW</a>
+                </div>
+                <div class="our-services">
+                    <h4>Home Loan</h4>
+                    <p>Digital sanction with benifits of special processing fee.</p>
+                    <a href="#">AVAIL HOME LOAN NOW</a>
+                </div>
+                <div class="our-services">
+                    <h4>Credit Card</h4>
+                    <p>Get the right card for you.</p>
+                    <a href="#">GET CREDIT CARD INSTANTLY</a>
+                </div>
+                <div class="our-services">
+                    <h4>Personal Loan</h4>
+                    <p>Get personal loan for all your needs.</p>
+                    <a href="#">AVAIL PERSONAL LOAN NOW</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!--THIS SECTION IS FOR EMI CALCULATOR PAGE-->
+        <section class="emi-calculator-page">
+            <h2>EMI Calculator</h2>
+            <div class="emi-calculator-form">
+                <div class="column">
+                    <div class="field-column-2">
+                        <div>Enter Amount</div>
+                        <input type="number" min="50000" max="10000000" step="10000" id="amount">
+                    </div>
+                    <div class="field-column-2">
+                        <div>Enter Duration</div>
+                        <input type="number" min="12" max="72" step="12" id="duration">
+                    </div> 
+                </div>
+                <div class="column">
+                    <div class="field-column-1">
+                        <div>Enter Interest Rate</div>
+                        <input type="number" min="8.4" max="14.2" step="0.2" id="roi">
+                    </div>
+                </div> 
+                <div class="column">
+                    <div class="field-column-1">
+                        <button class="calculate-emi-button" onclick="calculateEMI()">Calculate EMI</button>
+                    </div>
+                </div>             
+            </div>
+        </section>
+
+        <!--THIS SECTION IS FOR APPLY FOR LOAN PAGE-->
+        <section class="apply-loan-page">
+            <h2>Apply for Loan</h2>
+            <form class="apply-for-loan-form">
+                <div class="column">
+                    <div class="field-column-2">
+                        <div>First Name</div>
+                        <input type="text" id="fname">
+                    </div>
+                    <div class="field-column-2">
+                        <div>Last Name</div>
+                        <input type="text" id="lname">
+                    </div> 
+                </div>
+                <div class="column">
+                    <div class="field-column-1">
+                        <div>Email</div>
+                        <input type="email" id="email">
+                    </div>
+                </div> 
+                <div class="column">
+                    <div class="field-column-2">
+                        <div>Occupation</div>
+                        <select id="occupation" name="occupation">
+                            <option value="GovernmentEmp">Goverment Employee</option>
+                            <option value="salaried">Salaried Employee</option>
+                            <option value="selfEmployed">Self Employed</option>
+                        </select>
+                    </div>
+                    <div class="field-column-2">
+                        <div>Date of Birth</div>
+                        <input type="date" id="dob">
+                    </div> 
+                </div>  
+                <div class="column">
+                    <div class="field-column-1">
+                        <span style="display: inline-block; width: 150px;">Gender: </span> 
+                        <input type="radio" id="male" name="gender" value="male" checked> Male
+                        <input type="radio" id="female" name="gender" value="female"> Female
+                        <input type="radio" id="none" name="gender" value="none"> Do not Specify   
+                    </div>
+                </div>   
+                <div class="column">
+                    <div class="field-column-1">
+                        <span style="display: inline-block; width: 150px;">How to contact: </span> 
+                        <input type="checkbox" id="phone" name="contact" value="phone"> Phone 
+                        <input type="checkbox" id="email" name="contact" value="email"> Email 
+                        <input type="checkbox" id="sms" name="contact" value="sms"> SMS 
+                    </div>
+                </div>  
+                <div class="column">
+                    <div class="field-column-1">
+                        <button class="calculate-emi-button" onclick="ApplyForLoan(event)">Apply For loan</button>
+                    </div>
+                </div>     
+            </form>            
+        </section>
+    </div>
+
+    <!--Calculate EMI Modal Window-->
+        <div class="modal-overlay hide" id="calculate-emi-modal">
+            <div class="modal-wrapper">
+                <div class="modal-header">
+                    <h2>Calculated EMI</h2>
+                </div>            
+                <div class="modal-content">
+                    <table>
+                        <tr>
+                            <td style="font-weight: bold; color: #F39C12">Monthly EMI:</td>
+                            <td id="calculated-emi-cell">$4233.00</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold; color: #F39C12">Total Payable Amount</td>
+                            <td id="calculated-payable-amount-cell">$423233.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-modal-btn">OK</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="modal-overlay" id="calculate-emi-modal">
+            <div class="modal-wrapper">
+                <div class="modal-header">
+                    <h2>Loan Request Received</h2>
+                </div>            
+                <div class="modal-content">
+                    <h3>Hello, John</h3>
+                    <p style="margin-top: 30px;">
+                        We have received your loan request and we 
+                        will contact you through your provided contact
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="close-modal-btn">OK</button>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
